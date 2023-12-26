@@ -170,7 +170,7 @@ two_plots([db_17['visits'][db_17['visits']['session_time'] > '0 days 00:00:00'],
 
 two_stats([db_17['visits'], db_18['visits']], ['uid', 'start_ts'], ['2017', '2018', 'Visits'])
 
-two_plots([db_17['visits'], db_18['visits']], ['uid', 'start_ts'], 'Time')
+two_plots([db_17['visits'], db_18['visits']], ['uid', 'start_ts'], 'Visits')
 
 first_session_17 = db_17['visits'].groupby('uid')['start_ts'].min().reset_index()
 first_session_17.columns = ['uid', 'first_session']
